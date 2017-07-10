@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    	<script src="restrictedPages.js"></script>
+    	<script>
+    	 $(document).ready(function() {
+         	if (!window.sessionStorage.token) {
+         		$(location).attr("href", getBaseUrl() + "CashDispenseSystem/login.html");
+         	} else {
+         		getRandAmountDue();
+         	} 
+ 	      });
+        </script>
+    </head>
+     
+    <body>
+    
+       <form method="post">
+       	<input type="hidden" name="amountId" id="amountId" value="" />
+       	<div id="formTable">
+          <table style="width: 600; border-color: gray; border: 4px outset #ccc; -webkit-border-radius: 5px; border-radius: 15px;" cellpadding="2" cellspacing="2" >
+          	<tr><th colspan="2" align="center" style="font-size: 16px; color: #B5B0AE; ">Cash Dispense - Capture Amount<hr></th></tr>
+            <tr><td colspan="2" align="center"><div id="error"></div></td></tr>
+            <tr><td colspan="2"><a href="logout.html">Logout</a></td></tr>
+            <tr><td colspan="2" align="center">&nbsp;</td></tr>
+          	<tr><td>Amount due:</td><td><div id="amount"></div></td></tr>
+          	<tr><td colspan="2">Capture rand note denomination</td></tr>
+          	<tr><td align="left"><input type="text" name="randAmountCaptured" id="randAmountCaptured" onkeypress="if ( isNaN(this.value + String.fromCharCode(event.keyCode) )) return false;"/></td></tr>
+          	<tr><td><input type="button" value="Submit" onclick="getRandNoteDenimonation()" />&nbsp;<input type="button" value="clear" onclick="reload()" /></td></tr>
+          	
+          	<tr><td colspan="2" align="center">&nbsp;</td></tr>
+          	<tr><td colspan="2" align="center"><div id="denoId"></div></td></tr>
+          </table>
+          </div>
+          
+       </form>
+   
+   
+   </body>
+</html>

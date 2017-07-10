@@ -1,0 +1,20 @@
+<html>
+    <head>
+    	<title>Add User</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="adduser.js"></script>
+     </head>
+     
+    <body>
+      <form method="post">
+          <table style="width: 400; border-color: gray; border: 4px outset #ccc; -webkit-border-radius: 5px; border-radius: 15px;" cellpadding="2" cellspacing="2" >
+          	<tr><th colspan="2" align="center" style="font-size: 16px; color: #B5B0AE; ">Cash Dispense - Add User<hr></th></tr>
+            <tr><td colspan="2" align="center">&nbsp;</td></tr>
+          	<tr><td>Username</td><td><input type="text" name="username" id="username"/></td></tr>
+          	<tr><td>Password</td><td><input type="password" name="password" id="password"/></td></tr>
+          	<tr><td colspan="2"  align="center"><input type="button" value="Add User" onclick="createUser()" /></td></tr>
+          	<tr><td colspan="2" align="center">&nbsp;</td></tr>
+          </table>
+       </form>
+   </body>
+</html>

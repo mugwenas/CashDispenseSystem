@@ -1,0 +1,19 @@
+<html>
+    <head>
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="login.js"></script>
+     </head>
+     
+    <body>
+        <form method="post">
+          <table style="width: 400; border-color: gray; border: 4px outset #ccc; -webkit-border-radius: 5px; border-radius: 15px;" cellpadding="2" cellspacing="2" >
+          	<tr><th colspan="2" align="center" style="font-size: 16px; color: #B5B0AE; ">Cash Dispense - Login<hr></th></tr>
+            <tr><td colspan="2" align="center"><div id="error"></div></td></tr>
+          	<tr><td>Username</td><td><input type="text" name="username" id="username" value="username" /></td></tr>
+          	<tr><td>Password</td><td><input type="password" name="password" id="password" value="password" /></td></tr>
+          	<tr><td colspan="2" align="center"><input type="button" value="Login" onclick="loginUser()" />&nbsp;&nbsp;<input type="button" value="Home" onclick="home()" /></td></tr>
+          	<tr><td colspan="2" align="center">&nbsp;</td></tr>
+          </table>
+       </form>
+   </body>
+</html>
